@@ -1,0 +1,10 @@
+VSCode Editor
+ES6+ Syntax
+Async/Await
+React Hooks
+Redux with DevTools
+JWT(JSON Web Tokens)
+Postman HTTP Client
+Mongoose/MongoDB/Atlas
+Bcrypt Password Hashing
+Heroku and Git Deployment
