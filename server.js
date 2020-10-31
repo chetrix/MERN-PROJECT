@@ -5,6 +5,9 @@ const app = express();
 //connect database
 connetDb();
 
+//Init Middleware( in order to work request.body in routes/api/users, we have to initialize the middleware for the body parser)
+app.use(express.json({extended : false}));
+
 app.get('/', (req,res)=> res.send('API Running'));
 
 //Define Routes
