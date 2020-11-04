@@ -1,3 +1,4 @@
+//to send that token and authenticate and access the protected route
 const jwt = require('jsonwebtoken');
 const config=require('config');
 

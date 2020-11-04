@@ -19,7 +19,7 @@ async (req, res) => {
   const error= validationResult(req);
   console.log(error);
   if(!error.isEmpty()) {
-    return res.status(400).json({erros: error.array() });
+    return res.status(400).json({errors: error.array() });
   }
 
   const {name, email, password}=req.body;
@@ -50,11 +50,9 @@ async (req, res) => {
     const salt = await bcrypt.genSalt(10); //width or 10 round
 
     user.password =await bcrypt.hash(password, salt);
-    await user.save();
+    await user.save(); // to save user to the database
 
     //Return jsonwebtoken 
-    // res.send('User Registered');
-
     const payload = {
       user: {
         id: user.id
